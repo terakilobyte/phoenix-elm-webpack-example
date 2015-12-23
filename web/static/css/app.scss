@@ -2,7 +2,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 /* Space out content a bit */
-body, form, ul, table {
+body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -54,6 +54,237 @@ form.link, form.button {
 /* Supporting marketing content */
 .marketing {
   margin: 35px 0;
+}
+
+/*
+   red = #e35885
+   green = #8ec16d
+   blue = #61a1bc
+ */
+
+
+body {
+  background: #eaeaea;
+  color: #4f4f4f;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+}
+
+#container {
+  width: 500px;
+  margin: 50px auto;
+  padding: 0px 50px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0 0 25px 0;
+  color: #61a1bc;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 30px 0 0 0;
+  color: #797B74;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+footer {
+  color: #a6a6a6;
+  margin: 50px auto 0;
+  font-size: 12px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  text-align: center;
+  line-height: 1em;
+}
+
+footer a {
+  color: inherit;
+}
+
+button.sort {
+  border: 0;
+  height: 40px;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #5e6163;
+  background: #D9D9D9;
+  position: relative;
+  left: 210px;
+}
+
+button.sort:hover {
+  opacity: 0.75;
+}
+
+button.add {
+  border: 0;
+  height: 55px;
+  vertical-align: top;
+  width: 75px;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #fff;
+  background: #61a1bc;
+  color: #5e6163;
+  background: #D9D9D9;
+}
+
+button.add:hover {
+  opacity: 0.75;
+}
+
+button.delete {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  vertical-align: baseline;
+  font-family: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+button {
+  outline: none;
+  font-size: 100%;
+}
+
+form {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  display: inline;
+  margin: 0 5px;
+  width: 200px;
+  padding: 15px 20px;
+  text-align: center;
+  font-size:1.5em;
+  outline: none;
+  border: 1px dashed #c5c5c5;
+  color: #797B74;
+  background: rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border: 1px dashed #61a1bc;
+  outline: 0;
+  transition: border-color 0.3s ease-in;
+}
+
+ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+}
+
+li {
+  background: #61a1bc;
+  background: #fff;
+  height: 50px;
+  position: relative;
+  padding: 15px 30px !important;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+li:hover {
+  background: #fcfcfc;
+  /* background: #61a1bc; */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+li.total {
+  background: none;
+  box-shadow: none;
+  color: #61a1bc;
+}
+
+li .phrase {
+  position: absolute;
+  top: 18px;
+  left: 80px;
+}
+
+li .points {
+  position: absolute;
+  top: 18px;
+  right: 80px;
+}
+
+li .label {
+  position: absolute;
+  top: 18px;
+  left: 300px;
+}
+
+li.highlight {
+  background: #61a1bc;
+}
+
+li .delete {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+li .delete:after {
+  content: '✖';
+  color: #e35885;
+}
+
+li:hover .delete {
+  display: block;
+}
+
+li .delete:hover {
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px dashed #c5c5c5;
 }
 
 /* Responsive: Portrait tablets and up */
