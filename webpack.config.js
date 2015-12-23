@@ -21,7 +21,7 @@ module.exports = {
     extensions: ['', '.js', '.elm'],
     alias: {
       phoenix: __dirname + '/deps/phoenix/web/static/js/phoenix.js',
-      coffee: __dirname + '/web/elm/elm-stuff'
+      coffee: __dirname + '/web/elm'
     }
   },
   module: {
@@ -32,7 +32,6 @@ module.exports = {
     }, {
       test: /\.elm$/,
       exclude: [/elm-stuff/, /node_modules/],
-      resolve: [__dirname + '/web/elm/'],
       loader: 'elm-webpack'
     }, {
       test: /\.css$/,
