@@ -168,7 +168,7 @@ entryList address entries =
     ul [ ] items
 
 
-entryForm: Address Action -> Model -> Html
+entryForm : Address Action -> Model -> Html
 entryForm address model =
   div [ ]
       [ input
@@ -177,7 +177,7 @@ entryForm address model =
           value model.phraseInput,
           name "phrase",
           autofocus True,
-          onInput address UpdatePhraseInput
+          Utils.onInput address UpdatePhraseInput
         ]
         [ ],
         input
@@ -185,14 +185,15 @@ entryForm address model =
           placeholder "Points",
           value model.pointsInput,
           name "points",
-          onInput address UpdatePointsInput
+          Utils.onInput address UpdatePointsInput
         ]
         [ ],
-        button [ class "add", onClick address Add ] [ text "Add"],
-        h2
-          [ ]
-          [ text (model.phrase ++ " " ++ model.pointsInput)]
-      ]
+      button [ class "add", onClick address Add ] [ text "Add" ],
+      h2
+        [ ]
+        [ text (model.phraseInput ++ " " ++ model.pointsInput) ]
+    ]
+
 
 view : Address Action -> Model -> Html
 view address model =
